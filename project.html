@@ -1,0 +1,98 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CES - Court Event & Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1 class="logo"> CES India</h1>
+        <ul class="nav-links">
+            <li onclick="showPage('home')">Home</li>
+            <li onclick="showPage('cases')">Cases</li>
+            <li onclick="showPage('help')">Help</li>
+            <li onclick="showPage('about')">About</li>
+            <li onclick="showPage('contact')">Contact</li>
+        </ul>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <section id="home" class="page">
+        <h2>Welcome to CES</h2>
+        <p>Your simplified Court Case Event & Status tracker.</p>
+
+        <button class="start-btn" onclick="showPage('cases')">
+            View Case List
+        </button>
+    </section>
+
+    <!-- CASE LIST PAGE -->
+    <section id="cases" class="page hidden">
+        <h2>Indian Court Case List</h2>
+        <p>Search and tap on any case to view status.</p>
+
+        <!-- SEARCH BAR -->
+        <input 
+            type="text" 
+            id="searchBar" 
+            class="searchBox"
+            placeholder="Search cases..."
+            onkeyup="searchCases()"
+        >
+
+        <div id="caseContainer"></div>
+
+        <h3 id="caseTitle"></h3>
+        <p id="caseStatus"></p>
+    </section>
+
+    <!-- HELP PAGE -->
+    <section id="help" class="page hidden">
+        <h2>How to Use CES</h2><br>
+        <ul>
+            <li>Go to the **Cases** page</li>
+            <li>Search any Indian case</li>
+            <li>Click the case to check its status</li>
+            <li>Use the Contact page if you need support</li>
+        </ul>
+    </section>
+
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page hidden"> 
+        <h2>About CES</h2>
+        <p>CES is a simple educational project created for students to understand how web apps work.</p><br><hr><br>
+        <h3>Purpose of the system</h3><br>
+        <p><i>•	The government receives many court cases.</i></p><br>
+        <p><i>•	Officials & government lawyers need to understand each case clearly.</i></p><br>
+        <p><i>•	A system is needed where all details of a case are shown in one place.</i></p><br>
+        <p><i>•	With proper information, court cases can be closed faster.</i></p><br><hr><br>
+    
+        <h3>logies Used</h3><br>
+        <ul>
+            <li>HTML page structure</li>
+            <li>CSS styling & themes</li>
+            <li>JavaScript logic</li>
+            <li>Search filtering</li>
+            <li>Single Page Applications (SPA)</li>
+        </ul>
+    </section>
+
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page hidden">
+        <h2>Made by</h2><br><hr><br>
+        <p>Name: Rao Vatsala</p>
+        <p>T25162581056</p><br><hr><br>
+        <p>Name: Zala Jankiba</p>
+        <p>T25162581048</p><br><hr><br>
+        <p>Name: Yashvi Khamar</p>
+        <p>T25162581065</p><br><hr><br>
+    </section>
+
+    <script src="javascript.js"></script>
+</body>
+</html>
